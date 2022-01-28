@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.baner-img{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+.baner{
+    display: flex;
+    height: 100vh;
+}
+.baner-left{
+    flex: 1;
+    color: blanchedalmond;
+    display: flex;
+    align-items: center;
+}
+.baner-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baner-title{
+    font-size: 60px;
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+
+}
+.baner-title::before{
+    content: "This is our group";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #22bedd;
+    animation: typing 3s linear infinite;
+}
+.baner-text{
+    line-height: 2;
+    margin: 20px 0;
+}
+.group-button{
+    outline: 0;
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color:#22bedd ;
+    color: white;
+    border: 4px solid #22bedd;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.group-button:hover{
+    background-color: transparent;
+    color:#22bedd ;
+}
+
+@keyframes typing {
+    0%{
+        content: "T|";
+    }
+    4%{
+        content: "Th|";
+    }
+    8%{
+        content: "Thi|";
+    }
+    12%{
+        content: "This|";
+    }
+    16%{
+        content: "This |";
+    }
+    20%{
+        content: "This i|";
+    }
+    24%{
+        content: "This is|";
+    }
+    28%{
+        content: "This is |";
+    }
+    32%{
+        content: "This is o|";
+    }
+    36%{
+        content: "This is ou|";
+    }
+    40%{
+        content: "This is our|";
+    }
+    44%{
+        content: "This is our |";
+    }
+    48%{
+        content: "This is our g|";
+    }
+    52%{
+        content: "This is our gr|";
+    }
+    56%{
+        content: "This is our gro|";
+    }
+    60%{
+        content: "This is our grou|";
+    }
+    64%{
+        content: "This is our group|";
+    }
+    68%,
+    82%{
+        content: "This is our group|";
+    }
+    83%{
+        content: 'This is our grou|';
+    }
+    84%{
+        content: "This is our gro|";
+    }
+    85%{
+        content: "This is our gr|";
+    }
+    86%{
+        content: "This is our g|";
+    }
+    87%{
+        content: "This is our |";
+    }
+    88%{
+        content: "This is our";
+    }
+    89%{
+        content: "This is ou|";
+    }
+    90%{
+        content: "This is o|";
+    }
+    91%{
+        content: "This is |";
+    }
+    92%{
+        content: "This is|";
+    }
+    93%{
+        content: "This i|";
+    }
+    94%{
+        content: "This |";
+    }
+    95%{
+        content: "This|";
+    }
+    96%{
+        content: "Thi|";
+    }
+    97%{
+        content: "Th|";
+    }
+    98%{
+        content: "T|";
+    }
+    99%{
+        content: "|";
+    }
+    100%{
+        content: "|";
+    }
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+.section-title{
+    text-align: center;
+}
+.section-title h1 {
+    color: #22bedd;
+    font-size: 40px;
+    margin: 40px 0;
+    border-left: 3px solid #22bedd;
+    border-right: 3px solid #22bedd;
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: .8;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.photo{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: white;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top, .border.bottom{
+    height: 4px;
+    width: 240px;
+}
+.border.left, .border.right{
+    height: 240px;
+    width: 4px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
+}
+
+.photo-contnet{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding-left: 30px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(300px);
+    transition: .3s ease-out;
+}
+.photo:hover .photo-contnet{
+    transform: translateY(150px);
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
